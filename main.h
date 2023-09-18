@@ -7,6 +7,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+struct spec
+{
+	char *specifier;
+	int (*funct)(va_list);
+};
+typedef struct spec specifier_funct;
+
 int _printf(const char *format, ...);
 int _putchar(char c);
 
