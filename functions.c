@@ -77,15 +77,3 @@ int pr_int(va_list args)
 
 	return (length);
 }
-
-/**
- * pr_unsigned_int - Handle %u specifier
- * @args: The va_list of arguments
- *
- * Return: The number of characters printed
- */
-int pr_unsigned_int(va_list args)
-{
-	va_arg(args, unsigned int);
-	return (0);
-}
