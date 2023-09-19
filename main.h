@@ -38,5 +38,7 @@ int pr_unsigned_int(va_list args);
 int pr_octal(va_list args);
 int pr_hex_lower(va_list args);
 int pr_hex_upper(va_list args);
+/*Question 14*/
+int print_rot13(va_list args);
 
 #endif /* MAIN_H */
