@@ -125,3 +125,40 @@ int pr_hex_upper(va_list args)
 	va_arg(args, unsigned int);
 	return (0);
 }
+
+/**
+ * pr_binary - Print an unsigned int in binary format
+ * @args: The argument list
+ *
+ * Return: Number of characters printed
+ */
+int pr_binary(va_list args)
+{
+	unsigned int num = va_arg(args, unsigned int);
+	int count = 0;
+	int bit_count = 0;
+	unsigned int temp = num;
+	int i;
+	
+	if (num == 0)
+	{
+		write(1, "0", 1);
+		count++;
+		return (count);
+	}
+	
+	while (temp > 0)
+	{
+		temp /= 2;
+		bit_count++;
+	}
+
+	for (i = bit_count - 1; i >= 0; i--)
+	{
+		char digit = ((num >> i) & 1) + '0';
+		write(1, &digit, 1);
+		count++;
+	}
+	
+	return (count);
+}

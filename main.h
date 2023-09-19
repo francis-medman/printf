@@ -29,6 +29,8 @@ int pr_percent(va_list);
 int pr_string(va_list);
 /*Question 1*/
 int pr_int(va_list);
+/*Question 2*/
+int pr_binary(va_list args);
 /*Question 3*/
 int pr_unsigned_int(va_list args);
 int pr_octal(va_list args);
