@@ -29,11 +29,6 @@ int pr_percent(va_list);
 int pr_string(va_list);
 /*Q1*/
 int pr_int(va_list);
-/*Question 3*/
-int pr_unsigned_int(va_list args);
-int pr_octal(va_list args);
-int pr_hex_lower(va_list args);
-int pr_hex_upper(va_list args);
 /*Q2*/
 int pr_binary(va_list);
 char *_memcpy(char *dest, char *src, unsigned int n);
