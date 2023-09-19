@@ -7,6 +7,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * struct spec - creates a struct called spec (specifier)
+ * @specifier: format specifier
+ * @funct: pointer to the appropriate function to be invoked
+ */
 struct spec
 {
 	char *specifier;
@@ -16,6 +21,12 @@ typedef struct spec specifier_funct;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
+int select_f(const char *format, specifier_funct format_list[], va_list(args));
+
+/*Question 0*/
+int pr_char(va_list);
+int pr_percent(va_list);
+int pr_string(va_list);
 
 #endif /* MAIN_H */
 
