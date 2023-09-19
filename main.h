@@ -27,6 +27,8 @@ int select_f(const char *format, specifier_funct format_list[], va_list(args));
 int pr_char(va_list);
 int pr_percent(va_list);
 int pr_string(va_list);
+/*Question 1*/
+int pr_int(va_list);
 
 #endif /* MAIN_H */
 
