@@ -23,14 +23,16 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int select_f(const char *format, specifier_funct format_list[], va_list(args));
 
-/*Question 0*/
+/*Q0*/
 int pr_char(va_list);
 int pr_percent(va_list);
 int pr_string(va_list);
-/*Question 1*/
+/*Q1*/
 int pr_int(va_list);
-/*Question 2*/
-int pr_binary(va_list args);
+/*Q2*/
+int pr_binary(va_list);
+char *_memcpy(char *dest, char *src, unsigned int n);
+char *rev_st(char *s);
 /*Question 3*/
 int pr_unsigned_int(va_list args);
 int pr_octal(va_list args);
@@ -38,4 +40,3 @@ int pr_hex_lower(va_list args);
 int pr_hex_upper(va_list args);
 
 #endif /* MAIN_H */
-

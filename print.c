@@ -18,10 +18,6 @@ int _printf(const char *format, ...)
 	{"%", pr_percent},
 	{"d", pr_int},
 	{"i", pr_int},
-	{"u", pr_unsigned_int},
-	{"o", pr_octal},
-	{"x", pr_hex_lower},
-	{"X", pr_hex_upper},
 	{"b", pr_binary},
 	};
 	if (format == NULL)
