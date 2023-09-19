@@ -16,7 +16,6 @@ int select_f(const char *format, specifier_funct format_list[], va_list args)
 	for (i = 0; format[i] != '\0'; i++)
 {
 	if (format[i] == '%')
-		return(-1);
 	{
 		for (s = 0; format_list[s].specifier != NULL; s++)
 		{

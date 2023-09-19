@@ -86,7 +86,7 @@ int pr_int(va_list args)
  */
 int pr_unsigned_int(va_list args)
 {
-	unsigned int num = va_arg(args, unsigned int);
+	va_arg(args, unsigned int);
 	return (0);
 }
 
@@ -98,7 +98,7 @@ int pr_unsigned_int(va_list args)
  */
 int pr_octal(va_list args)
 {
-	unsigned int num = va_arg(args, unsigned int);
+	va_arg(args, unsigned int);
 	return (0);
 }
 
@@ -110,7 +110,7 @@ int pr_octal(va_list args)
  */
 int pr_hex_lower(va_list args)
 {
-	unsigned int num = va_arg(args, unsigned int);
+	va_arg(args, unsigned int);
 	return (0);
 }
 
@@ -122,6 +122,6 @@ int pr_hex_lower(va_list args)
  */
 int pr_hex_upper(va_list args)
 {
-	unsigned int num = va_arg(args, unsigned int);
+	va_arg(args, unsigned int);
 	return (0);
 }
