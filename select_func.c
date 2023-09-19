@@ -26,6 +26,19 @@ int select_f(const char *format, specifier_funct format_list[], va_list args)
 				break;
 			}
 		}
+		if (format_list[s].specifier == NULL && format[i + 1] != ' ')
+		{
+			if (format[i + 1] != '\0')
+			{
+				_putchar(format[i]);
+				_putchar(format[i + 1]);
+				num_char = num_char + 2;
+			}
+			else
+			{
+				return (-1);
+			}
+		}
 		i = i + 1;
 	}
 	else
