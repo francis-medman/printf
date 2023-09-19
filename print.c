@@ -5,51 +5,26 @@
  * _printf - Custom printf function
  * @format: The format string
  *
- * Return: Printed characters
+ * Return: number  of Printed characters
  */
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int count = 0;
-	
-	va_start(args, format);
-	while (*format)
+	int count;
+
+	specifier_funct format_list[] = {
+	{"c", pr_char},
+	{"s", pr_string},
+	{"%", pr_percent},
+	};
+	if (format == NULL)
 	{
-		if (*format != '%')
-		{
-			_putchar(*format);
-			count++;
-		}
-		else
-		{
-			format++;
-			if (*format == 'c')
-			{
-				char c = va_arg(args, int);
-				_putchar(c);
-				count++;
-			}
-			else if (*format == 's')
-			{
-				char *str = va_arg(args, char *);
-				if (str == NULL)
-					str = "(null)";
-				while (*str)
-				{
-					_putchar(*str);
-					str++;
-					count++;
-				}
-			}
-			else if (*format == '%')
-			{
-				_putchar('%');
-				count++;
-			}
-		}
-		format++;
+		return (-1);
 	}
+
+	va_start(args, format);
+	count = select_f(format, format_list, args);
 	va_end(args);
-	
-	return count;
+
+	return (count);
 }
