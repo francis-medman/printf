@@ -17,10 +17,6 @@ int pr_binary(va_list args)
 	{
 		m = m / base;
 	}
-	if (n < 0)
-	{
-		return (-1);
-	}
 
 	if (n == 0)
 	{
