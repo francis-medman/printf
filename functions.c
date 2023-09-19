@@ -38,7 +38,42 @@ int pr_string(va_list args)
  */
 int pr_percent(__attribute__((unused))va_list args)
 {
-	/*args is declared but wont be used hence the unused attrb*/
 	_putchar('%');
 	return (1);
+}
+/**
+ * pr_int - prints a decimal number
+ * @args: function input arguments
+ * Return: length of characters
+ */
+int pr_int(va_list args)
+{
+	int n, divisor, length;
+	unsigned int num;
+
+	n  = va_arg(args, int);
+	divisor = 1;
+	length = 0;
+
+	if (n < 0)
+	{
+		length += _putchar('-');
+		num = n * -1;
+	}
+	else
+	{
+		num = n;
+	}
+	for (; num / divisor > 9;)
+	{
+		divisor *= 10;
+	}
+	for (; divisor != 0; )
+	{
+		length += _putchar('0' + num / divisor);
+		num %= divisor;
+		divisor /= 10;
+	}
+
+	return (length);
 }
